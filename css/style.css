@@ -1,0 +1,425 @@
+@import './fonts/font.css';
+.footer-logo, .footer, .insta-link, .apple-card, .swiper-img, .gnb ul {
+  display: flex;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard-R";
+  font-size: 14px;
+  color: #222;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gnb {
+  width: 100%;
+  height: 55px;
+  position: fixed;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.4901960784);
+}
+.gnb ul {
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 100px;
+}
+.gnb a {
+  font-family: "Pretendard-B";
+  font-size: 18px;
+}
+
+.gnb ul li:last-child a {
+  padding-right: 100px;
+}
+
+.gnb-logo {
+  position: absolute;
+  left: 100px;
+}
+.gnb-logo img {
+  width: 50px;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/cafe-07.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 72px;
+  color: #fff;
+  font-family: "Pretendard-B";
+}
+
+.main-subtitle {
+  font-family: "PassionsConflict-R";
+  font-weight: normal;
+  font-size: 102px;
+  color: #fff;
+}
+
+.main-cnt {
+  color: #fff;
+  font-family: "Pretendard-L";
+  font-size: 24px;
+}
+
+.main-arrow {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+}
+
+.main-arrow_card {
+  display: inline-block;
+  position: relative;
+  margin-left: -10px;
+  text-align: center;
+  animation: arrow_down 1.5s infinite;
+}
+
+.arrow_down {
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  animation: arrow-wave 1s infinite;
+  animation-direction: alternate;
+}
+
+.arrow_down:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.arrow_down:nth-child(2) {
+  margin-top: 6px;
+  animation-delay: 0.2s;
+}
+
+.arrow_down:nth-child(3) {
+  margin-top: 6px;
+  animation-delay: 0.3s;
+}
+
+@keyframes arrow-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes arrow_down {
+  0% {
+    top: 28px;
+  }
+  50% {
+    top: 40px;
+  }
+  100% {
+    top: 28px;
+  }
+}
+.menu-card {
+  text-align: center;
+}
+
+.menu-title {
+  display: block;
+  text-align: center;
+  font-family: "Pretendard-EB";
+  font-size: 42px;
+}
+.menu-title span {
+  font-family: "SeymourOne-R";
+  font-size: 52px;
+  color: #9A767C;
+}
+
+.menu-list {
+  display: block;
+  position: absolute;
+  right: 200px;
+}
+.menu-list h3 {
+  display: inline-block;
+  font-size: 18px;
+  padding-right: 100px;
+  color: #999;
+  font-family: "Pretendard-L";
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.menu-list h3:last-child {
+  padding-right: 0px;
+}
+
+.click {
+  font-family: "Pretendard-EB" !important;
+  color: #222 !important;
+}
+
+.swiper {
+  margin-top: 100px;
+  width: 80%;
+  height: 500px;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.swiper-slide p {
+  font-family: "Pretendard-SB";
+  font-size: 20px;
+}
+
+.swiper-button-next {
+  background: url(/img/next-02.png) no-repeat;
+  background-size: 80% auto;
+  background-position: center;
+}
+
+.swiper-button-prev {
+  background: url(/img/prev-01.png) no-repeat;
+  background-size: 80% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+}
+.swiper-slide img {
+  width: 35%;
+}
+
+.swiper-img {
+  height: 25%;
+  justify-content: center;
+}
+
+.apple-title {
+  font-size: 42px;
+  font-family: "Pretendard-EB";
+  text-align: center;
+  margin-bottom: 50px;
+}
+.apple-title span {
+  font-family: "SeymourOne-R";
+  font-size: 52px;
+  color: #9A767C;
+}
+
+.apple-card {
+  width: 100%;
+  justify-content: center;
+  gap: 200px;
+}
+
+.apple-txt h3 {
+  font-size: 42px;
+  font-family: "Pretendard-B";
+  color: #747247;
+  margin-bottom: 30px;
+}
+.apple-txt h4 {
+  font-size: 42px;
+  font-family: "Pretendard-B";
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+.apple-txt p {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: -1px;
+}
+
+.apple-img img {
+  width: 700px;
+}
+
+.interior-title {
+  font-size: 42px;
+  font-family: "Pretendard-EB";
+  text-align: center;
+  margin-bottom: 30px;
+}
+.interior-title span {
+  font-family: "SeymourOne-R";
+  font-size: 52px;
+  color: #9A767C;
+}
+
+.interior-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.interior-img img {
+  width: 18%;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+}
+
+.location-title {
+  font-size: 42px;
+  font-family: "Pretendard-EB";
+  text-align: center;
+  margin-bottom: 30px;
+}
+.location-title span {
+  font-family: "SeymourOne-R";
+  font-size: 52px;
+  color: #9A767C;
+}
+
+iframe {
+  box-shadow: 5px 5px 10px #eee;
+}
+
+.location-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+.insta-title {
+  font-size: 42px;
+  font-family: "Pretendard-EB";
+  text-align: center;
+  margin-bottom: 30px;
+}
+.insta-title span {
+  font-family: "SeymourOne-R";
+  font-size: 52px;
+  color: #9A767C;
+}
+
+.insta-img {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  width: 1200px;
+  height: 400px;
+  margin: 0 auto;
+}
+.insta-img li {
+  width: 200px;
+}
+.insta-img li a {
+  display: block;
+  overflow: hidden;
+}
+.insta-img li a img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  transition: all 0.2s linear;
+}
+.insta-img li a img:hover {
+  transform: scale(1.1);
+}
+
+.insta-link {
+  width: 400px;
+  height: 40px;
+  background: #747247;
+  justify-content: center;
+  margin: 60px auto 0px auto;
+}
+.insta-link a {
+  color: #fff;
+  font-family: "Prata-R";
+  font-size: 18px;
+}
+
+.footer-wrap {
+  background: #2C2323;
+}
+
+.footer {
+  height: 300px;
+  justify-content: space-evenly;
+}
+
+.footer-logo {
+  height: 100%;
+  position: absolute;
+  left: 200px;
+}
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-info {
+  margin-right: 300px;
+}
+.footer-info p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+}
+.footer-info p span {
+  font-family: "Pretendard-B";
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-insta {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+.footer-insta img {
+  width: 40px;
+}/*# sourceMappingURL=style.css.map */

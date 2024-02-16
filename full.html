@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/jquery.fullpage.js"></script>
+    <link rel="stylesheet" href="./css/jquery.fullpage.css">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gnb {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            z-index: 9;
+            background-color: #333;
+            /* 배경색을 여기에 적용, 예시로는 어두운 회색 */
+            color: #fff;
+            /* 기본 글자 색상 (예시로 흰색) */
+            transition: color 0.3s ease;
+            /* 부드러운 전환 효과를 위한 트랜지션 */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .gnb a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .gnb a:hover {
+            text-decoration: underline;
+        }
+
+        .dark-background {
+            background-color: #000;
+            /* 어두운 배경색으로 변경 */
+            color: #fff;
+            /* 밝은 글자 색상으로 변경 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- custom menu 작성 -->
+    <nav class="gnb" id="navbar">
+        <ul>
+            <li><a href="#section1" data-menuanchor="section1">메뉴1</a></li>
+            <li><a href="#section2" data-menuanchor="section2">메뉴2</a></li>
+            <li><a href="#section3" data-menuanchor="section3">메뉴3</a></li>
+        </ul>
+    </nav>
+
+    <div class="fullpage">
+        <div class="section">
+            <div>
+                컨텐츠 작성
+            </div>
+        </div>
+        <div class="section">
+            <div>
+                컨텐츠 작성
+            </div>
+        </div>
+        <div class="section">
+            <div>
+                컨텐츠 작성
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            var page = $('.fullpage').fullpage({
+
+                // 1. 네비게이션 보이기
+                navigation: true,
+
+                // 2. 네비게이션 위치 지정
+                navigationPosition: 'left',
+
+                // 3. 각 섹션의 배경색상 지정 (6자의 핵사코드 작성가능)
+                sectionsColor: ['pink', 'yellow', '#efefef'],
+
+                // menu에 대한 옵션 설정
+                menu: '.gnb',
+                anchors: ['section1', 'section2', 'section3'],
+
+            });
+        })
+        // JavaScript 코드
+        window.addEventListener('scroll', function () {
+            var navbar = document.getElementById('navbar');
+
+            // 어두운 배경색을 가진 섹션 등에 따라 클래스 추가/제거
+            if (window.scrollY > 100) {
+                navbar.classList.add('dark-background');
+            } else {
+                navbar.classList.remove('dark-background');
+            }
+        });
+    </script>
+</body>
+
+</html>

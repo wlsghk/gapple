@@ -1,0 +1,63 @@
+/* 프리텐다드 기본 */
+@font-face {
+    font-family: 'Pretendard-R';
+    font-weight: 400;
+    font-display: swap;
+    src: url('./Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-M';
+    font-weight: 500;
+    font-display: swap;
+    src: url('./Pretendard-Medium.woff') format('woff');
+}
+
+/* 프리텐다드 가늘게 */
+@font-face {
+    font-family: 'Pretendard-L';
+    font-weight: 300;
+    font-display: swap;
+    src: url('./Pretendard-Light.woff') format('woff');
+}
+
+/* 프리텐다드 굵게 */
+@font-face {
+    font-family: 'Pretendard-EB';
+    font-weight: 800;
+    font-display: swap;
+    src: url('./Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-B';
+    font-weight: 700;
+    font-display: swap;
+    src: url('./Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-SB';
+    font-weight: 600;
+    font-display: swap;
+    src: url('./Pretendard-SemiBold.woff') format('woff');
+}
+
+/* 영문 */
+@font-face {
+    font-family: 'PassionsConflict-R';
+    font-display: swap;
+    src: url('./PassionsConflict-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'SeymourOne-R';
+    font-display: swap;
+    src: url('./SeymourOne-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Prata-R';
+    font-display: swap;
+    src: url('./Prata-Regular.ttf') format('woff');
+}
