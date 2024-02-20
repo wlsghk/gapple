@@ -46,7 +46,19 @@ a {
     display: none;
 }
 
+.tablet.active {
+    display: block;
+    position: fixed;
+}
+
 // 태블릿 메뉴 끝
+
+// 태블릿 네비바
+.tablet-nav {
+    display: none;
+}
+
+// 태블릿 네비바 끝
 
 // 네비바
 .gnb {
@@ -317,7 +329,7 @@ a {
     width: 100%;
     @extend %flex-center;
     justify-content: center;
-    gap: 200px;
+    gap: 10.26vw;
 }
 
 .apple-txt {
@@ -343,6 +355,9 @@ a {
 }
 
 .apple-img {
+    width: 36.46vw;
+    overflow: hidden;
+
     img {
         width: 700px;
     }
@@ -368,10 +383,10 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
 
     img {
-        width: 18%;
+        width: 350px;
     }
 }
 
@@ -520,13 +535,61 @@ iframe {
 // 푸터 끝
 
 // 반응형
-// 태블릿 메뉴
-@media screen and (max-width: "1024px") {
+// 반응형
+@media screen and (max-width: "1350px") {
+
+    // 네비바 시작
+    .gnb {
+        display: none;
+    }
+
+    // 네비바 끝
+
+    // 태블릿 네비바 시작
+    .tablet-nav {
+        width: 100%;
+        height: 55px;
+        display: block;
+        position: fixed;
+        z-index: 9999;
+        background: #ffffff7d;
+
+        ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tablet-logo {
+            padding-left: 100px;
+        }
+
+        .xi-bars {
+            padding-right: 50px;
+        }
+    }
+
+    .tablet-logo {
+        img {
+            width: 50px;
+        }
+    }
+
+    .xi-bars {
+        font-size: ($main-size + 12px);
+        font-weight: bolder;
+        cursor: pointer;
+    }
+
+    // 태블릿 네비바 끝
+
+    // 태블릿 메뉴 시작
     .tablet {
         width: 100%;
         height: 100vh;
         background: #C3C6CE;
-        z-index: 99999 !important;
+        z-index: 99999999 !important;
     }
 
     .tablet-cnt {
@@ -588,7 +651,541 @@ iframe {
             width: 40px;
         }
     }
+
+    // 태블릿 메뉴 끝
+
+    // 내부 시작
+    .interior-img {
+        gap: 5.93vw;
+
+        img {
+            width: 25.93vw;
+        }
+    }
+
+    // 내부 끝
+
+    // 위치 시작
+    iframe {
+        width: 66.67vw !important;
+        height: 34.07vw !important
+    }
+
+    // 위치 끝
+    // 인스타 시작
+    .insta-img {
+        grid-template-columns: repeat(4, 1fr);
+        width: 800px;
+        height: 600px;
+    }
+
+    // 인스타 끝
+
+    // 푸터 시작
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer-logo {
+        position: inherit;
+        height: 40%;
+    }
+
+    .footer-info {
+        margin-right: 0px;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    // 푸터 끝
 }
 
-// 태블릿 메뉴 끝
+
+@media screen and (max-width: "1024px") {
+
+    // 태블릿 메뉴
+    .tablet {
+        a {
+            font-size: 6.25vw !important;
+        }
+    }
+
+    // 테블릿 메뉴 끝
+
+    // 사과 시작
+    .apple-txt {
+
+        h3,
+        h4 {
+            font-size: 4.10vw;
+        }
+
+        p {
+            font-size: 1.76vw;
+        }
+    }
+
+    // 사과 끝
+
+    // 인스타 시작
+    .insta-title {
+        margin-bottom: 2.93vw;
+    }
+
+    .insta-img {
+        grid-template-columns: repeat(3, 1fr);
+        width: 450px;
+        height: 600px;
+
+        li {
+            width: 150px;
+        }
+    }
+
+    .insta-link {
+        margin-top: 5.86vw;
+    }
+
+    // 인스타 끝
+}
+
+@media screen and (max-width: "760px") {
+
+    // 태블릿 메뉴 시작
+    .tablet-cnt {
+        a {
+            font-size: 8.42vw !important;
+            line-height: 13.16vw !important;
+        }
+    }
+
+    // 태블릿 메뉴 끝
+
+    // 메인 시작
+    .main-title {
+        font-size: 9.38vw !important;
+    }
+
+    .main-subtitle {
+        font-size: 13.28vw !important;
+    }
+
+    .main-cnt {
+        font-size: 3.13vw !important;
+    }
+
+    // 메인 끝
+
+    // 메뉴 시작
+    .menu-list {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    // 메뉴 끝
+
+    // 사과 시작
+    .apple-title {
+        margin-bottom: 30px;
+        line-height: 7vw;
+    }
+
+    .apple-card {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .apple-img {
+        width: 76.32vw;
+        height: 43.42vw;
+
+        img {
+            width: 92.11vw;
+        }
+    }
+
+    .apple-txt {
+
+        h3,
+        h4 {
+            text-align: center;
+            font-size: 5.53vw;
+        }
+
+        p {
+            text-align: center;
+            font-size: ($main-size + 4px);
+            line-height: 30px;
+        }
+    }
+
+    // 사과 끝
+}
+
+@media screen and (max-width: "600px") {
+
+    // 태블릿 네비바 시작
+    .tablet-logo {
+        padding-left: 16.67vw !important;
+    }
+
+    .xi-bars {
+        padding-right: 8.33vw !important;
+    }
+
+    // 태블릿 네비바 끝
+
+    // 태블릿 메뉴 시작
+
+    .tablet-close {
+        img {
+            width: 4.17vw;
+        }
+    }
+
+    .tablet-insta {
+        img {
+            width: 6.67vw;
+        }
+    }
+
+    // 태블릿 메뉴 끝
+
+    // 메인 시작
+    .main-cnt {
+        font-size: 18.78px !important;
+    }
+
+    // 메인 끝
+
+    // 메뉴 시작
+    .menu-title {
+        font-size: 7vw !important;
+
+        span {
+            font-size: 8.67vw !important;
+        }
+    }
+
+    .menu-list {
+        h3 {
+            font-size: 3vw !important;
+        }
+    }
+
+    .list-coffee,
+    .list-drink {
+        padding-right: 16.67vw !important;
+    }
+
+    // 스와이퍼 시작
+    .swiper {
+        height: 83.33vw !important;
+        margin-top: 16.67vw !important;
+    }
+
+    .swiper-slide {
+        img {
+            width: 17.50vw !important;
+        }
+
+        p {
+            font-size: 3.33vw !important;
+        }
+    }
+
+    // 스와이퍼 끝
+    // 메뉴 끝
+
+    // 사과 시작
+    .apple-title {
+        font-size: 7vw;
+        margin-bottom: 5vw;
+
+        span {
+            font-size: 8.67vw;
+        }
+    }
+
+    .apple-card {
+        gap: 5vw;
+    }
+
+    .apple-txt {
+
+        h3,
+        h4 {
+            margin-bottom: 5vw;
+        }
+
+        p {
+            font-size: 3vw;
+            line-height: 5vw;
+        }
+    }
+
+    // 사과 끝
+
+    // 내부 시작
+    .interior-title {
+        font-size: 7vw;
+        margin: 0px;
+
+        span {
+            font-size: 8.67vw;
+        }
+    }
+
+    // 스와이퍼 시작
+    .mySwiper2 {
+        margin-top: 8vw !important;
+    }
+
+    .interior .swiper-slide {
+        img {
+            width: 60vw !important;
+            height: 90vw !important;
+        }
+    }
+
+    // 스와이퍼 끝
+
+    // 내부 끝
+
+    // 위치 시작
+    .location-title {
+        font-size: 7vw;
+
+        span {
+            font-size: 8.67vw;
+        }
+    }
+
+    .location-info {
+        font-size: 3.33vw;
+    }
+
+    // 위치 끝
+
+    // 인스타 시작
+    .insta-title {
+        font-size: 7vw;
+
+        span {
+            font-size: 8.67vw;
+        }
+    }
+
+    .insta-img {
+        width: 75vw;
+        height: 100vw;
+
+        li {
+            width: 25vw;
+        }
+    }
+
+    // 인스타 끝
+
+    // 푸터 시작
+    .footer {
+        justify-content: center;
+        gap: 10px;
+        height: 200px;
+    }
+
+    .footer-logo {
+        height: 20%;
+
+        img {
+            width: 16.67vw;
+        }
+    }
+
+    .footer-info {
+        p {
+            font-size: 3vw;
+            line-height: 6.67vw;
+
+            span {
+                font-size: 3vw;
+            }
+        }
+    }
+
+    .footer-insta {
+        position: inherit;
+
+        img {
+            width: 6.67vw;
+        }
+    }
+
+    // 푸터 끝
+}
+
+@media screen and (max-width: "532px") {
+
+    // 인스타 시작
+    .insta-link {
+        width: 75.19vw;
+
+        a {
+            font-size: 3.38vw;
+        }
+    }
+
+    // 인스타 끝
+}
+
+@media screen and (max-width: "425px") {
+
+    // 태블릿 메뉴 시작
+    .tablet-cnt {
+        a {
+            font-size: 35.785px !important;
+            line-height: 57px !important;
+        }
+    }
+
+    .tablet-close {
+        img {
+            width: 17.72px;
+        }
+    }
+
+    .tablet-insta {
+        img {
+            width: 28.34px;
+        }
+    }
+
+    // 태블릿 메뉴 끝
+
+    // 메인 시작
+    .main-cnt {
+        font-size: 4.42vw !important;
+    }
+
+    // 메인 끝
+
+    // 메뉴 시작
+    .menu-title {
+        font-size: 29.75px !important;
+
+        span {
+            font-size: 36.8475px !important;
+        }
+    }
+
+    .menu-list {
+        h3 {
+            font-size: 12.75px !important;
+        }
+    }
+
+    // 스와이퍼 시작
+    .swiper {
+        height: 354px !important;
+    }
+
+    .swiper-slide {
+        img {
+            width: 74.38px !important;
+        }
+
+        p {
+            font-size: 14px !important;
+        }
+    }
+
+    // 스와이퍼 끝
+
+    // 메뉴 끝
+
+    // 사과 시작
+    .apple-title {
+        font-size: 29.75px;
+        line-height: 30px;
+
+        span {
+            font-size: 36.8475px;
+        }
+    }
+
+    .apple-txt {
+
+        h3,
+        h4 {
+            font-size: 23.5px;
+        }
+
+        p {
+            font-size: 12.75px;
+            line-height: 20px;
+        }
+    }
+
+    // 사과 끝
+
+    // 내부 시작
+    .interior-title {
+        font-size: 29.75px !important;
+
+        span {
+            font-size: 36.8475px !important;
+        }
+    }
+
+    // 스와이퍼 시작
+    .interior-img {
+        img {
+            width: 255px;
+        }
+    }
+
+    // 스와이퍼 끝
+
+    // 내부 끝
+
+    // 위치 시작
+    .location-title {
+        font-size: 29.75px !important;
+
+        span {
+            font-size: 36.8475px !important;
+        }
+    }
+
+    .location-info {
+        font-size: 14.15px;
+    }
+
+    // 위치 끝
+
+    // 인스타 시작
+    .insta-title {
+        font-size: 29.75px !important;
+
+        span {
+            font-size: 36.8475px !important;
+        }
+    }
+
+    .insta-link {
+        height: 9.41vw;
+
+        a {
+            font-size: 14.365px;
+        }
+    }
+
+    // 인스타 끝
+
+}
+
 // 반응형 끝
